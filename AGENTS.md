@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Portfolio structure
+
+- Keep the single-page portfolio at `/`, with shared visual tokens and portfolio styling in `src/styles.css`, because the site is an editorial one-page portfolio.
