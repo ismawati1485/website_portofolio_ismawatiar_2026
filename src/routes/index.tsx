@@ -11,6 +11,9 @@ const projects = [
     type: "Full Stack Web Application",
     stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
     theme: "ship",
+    overview: "A full-stack system for organizing vessel maintenance and keeping work activity in view.",
+    role: "Full-stack web development",
+    features: ["Vessel maintenance schedules", "Work-order tracking", "Maintenance status overview"],
   },
   {
     number: "02",
@@ -18,6 +21,9 @@ const projects = [
     type: "Business Intelligence Dashboard",
     stack: ["React", "TypeScript", "Node.js", "Microsoft SQL Server"],
     theme: "erp",
+    overview: "A reporting dashboard that makes business performance and ERP data easier to review.",
+    role: "Full-stack web development",
+    features: ["Business summary metrics", "Reporting dashboard", "Performance trend visualization"],
   },
   {
     number: "03",
@@ -25,13 +31,19 @@ const projects = [
     type: "Web Application",
     stack: [],
     theme: "meeting",
+    overview: "A web application for organizing meeting participation and recording attendance.",
+    role: "Web application development",
+    features: ["Meeting details", "Attendee lists", "Attendance recording"],
   },
   {
     number: "04",
     title: "CVRP Optimization\nusing Genetic Algorithm",
-    type: "Research / Optimization",
+    type: "Research / Optimization Project",
     stack: [],
     theme: "research",
+    overview: "A research project applying a genetic algorithm to the capacitated vehicle routing problem.",
+    role: "Research and algorithm implementation",
+    features: ["Vehicle route optimization", "Route distance evaluation", "Genetic algorithm approach"],
   },
 ];
 
@@ -132,20 +144,31 @@ function Portfolio() {
         </div>
         <div className="project-list">
           {projects.map((project) => (
-            <a className={`project-row reveal project-${project.theme}`} href="#contact" key={project.number} aria-label={`${project.title.replace("\n", " ")} — project details coming soon`}>
-              <div className="project-visual" aria-hidden="true">
-                <ProjectArtwork theme={project.theme} />
-                <span className="visual-open"><ArrowUpRight /></span>
-              </div>
-              <div className="project-info">
-                <div className="project-topline"><span>{project.number} / 04</span><span className="project-type">{project.type}</span></div>
-                <h3>{project.title.split("\n").map((line, index) => <span key={line}>{index > 0 && <br />}{line}</span>)}</h3>
-                <div className="project-bottomline">
-                  <span className="project-stack">{project.stack.map((item) => <span key={item}>{item}</span>)}</span>
-                  <span className="project-link">View project <ArrowUpRight aria-hidden="true" /></span>
+            <details className={`project-item reveal project-${project.theme}`} key={project.number}>
+              <summary className="project-row" aria-label={`${project.title.replace("\n", " ")} — expand project details`}>
+                <div className="project-visual" aria-hidden="true">
+                  <ProjectArtwork theme={project.theme} />
+                  <span className="screenshot-placeholder-label">Project screenshot placeholder</span>
+                  <span className="visual-open"><ArrowUpRight /></span>
+                </div>
+                <div className="project-info">
+                  <div className="project-topline"><span>{project.number} / 04</span><span className="project-type">{project.type}</span></div>
+                  <h3>{project.title.split("\n").map((line, index) => <span key={line}>{index > 0 && <br />}{line}</span>)}</h3>
+                  <div className="project-bottomline">
+                    <span className="project-stack">{project.stack.length ? project.stack.map((item) => <span key={item}>{item}</span>) : <span>Project-specific stack not provided</span>}</span>
+                    <span className="project-link"><span className="project-open-label">View details</span><span className="project-close-label">Close details</span><ArrowUpRight aria-hidden="true" /></span>
+                  </div>
+                </div>
+              </summary>
+              <div className="project-details">
+                <p className="project-overview"><span>Overview</span>{project.overview}</p>
+                <div className="project-detail-grid">
+                  <p><span>Role</span>{project.role}</p>
+                  <div className="project-features"><span>Key features</span><ul>{project.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div>
+                  <p><span>Tech stack</span>{project.stack.length ? project.stack.join(" · ") : "Project-specific technologies not provided"}</p>
                 </div>
               </div>
-            </a>
+            </details>
           ))}
         </div>
       </section>
@@ -155,17 +178,32 @@ function Portfolio() {
         <div className="about-content reveal">
           <h2>Practical ideas,<br />built with <span>purpose.</span></h2>
           <div className="about-copy">
-            <p>I’m Ismawati, a System Information graduate and Full Stack Web Developer based in Sidoarjo. I enjoy building practical web applications, dashboards, and data-driven systems.</p>
+            <p>I’m Ismawati Ainol Robbi, a System Information graduate and Full Stack Web Developer based in Sidoarjo. I build practical web applications, dashboards, and data-driven systems.</p>
             <a className="text-action" href="#contact">More about me <ArrowUpRight aria-hidden="true" /></a>
           </div>
         </div>
         <div className="about-foot reveal"><span>SYSTEM INFORMATION GRADUATE</span><span>BASED IN SIDOARJO, INDONESIA</span></div>
+        <div className="about-details reveal">
+          <section className="background-column" aria-labelledby="experience-heading">
+            <h3 id="experience-heading">Experience</h3>
+            <div className="background-entry"><div><h4>Junior Web Developer</h4><p>PT Indoberka Investama</p></div><span>May 2026 – July 2026</span></div>
+            <div className="background-entry"><div><h4>Web Developer Intern</h4><p>Balai Diklat Keagamaan Surabaya</p></div><span>June 2025 – August 2025</span></div>
+          </section>
+          <section className="background-column" aria-labelledby="education-heading">
+            <h3 id="education-heading">Education</h3>
+            <div className="background-entry"><div><h4>Universitas Nahdlatul Ulama Sidoarjo</h4><p>Sistem Informasi</p></div><span>2022–2026</span></div>
+          </section>
+          <section className="background-column stack-column" aria-labelledby="stack-heading">
+            <h3 id="stack-heading">Tech Stack</h3>
+            <p className="tech-stack-list">React · TypeScript · JavaScript · Node.js · Express.js · PostgreSQL · Microsoft SQL Server · Tailwind CSS · Git · GitHub</p>
+          </section>
+        </div>
       </section>
 
       <footer className="contact-section" id="contact">
         <div className="contact-topline"><span className="eyebrow">04 / Get in touch</span><span>OPEN TO NEW OPPORTUNITIES</span></div>
-        <div className="contact-main"><h2>Let’s build<br />something useful<span className="headline-period">.</span></h2><a className="contact-arrow" href="mailto:hello@ismawati.dev" aria-label="Email Ismawati"><ArrowUpRight /></a></div>
-        <div className="contact-bottom"><a href="mailto:hello@ismawati.dev">hello@ismawati.dev</a><span>© 2026 ISMAWATI AINOL ROBBI</span><a href="#home">Back to top ↑</a></div>
+        <div className="contact-main"><h2>Let’s build<br />something useful<span className="headline-period">.</span></h2><a className="contact-cta" href="#contact-links"><span>Get in touch</span><span className="contact-arrow"><ArrowUpRight /></span></a></div>
+        <div className="contact-bottom"><div className="contact-links" id="contact-links" aria-label="Contact and profile links"><span>Email <b>Not provided</b></span><span>GitHub <b>Profile not provided</b></span><span>LinkedIn <b>Profile not provided</b></span></div><span>© 2026 ISMAWATI AINOL ROBBI</span><a href="#home">Back to top ↑</a></div>
       </footer>
     </main>
   );
