@@ -89,7 +89,7 @@ function Portfolio() {
           </a>
           <Button variant="outline" size="sm" className="cv-button" asChild>
             <a
-              href="/Ismawati_Ainol_Robbi_Web Developer.pdf"
+              href="/Ismawati%20Ainol%20Robbi_Web%20Developer.pdf"
               download="Ismawati_Ainol_Robbi_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -246,10 +246,16 @@ function Portfolio() {
           </h2>
           <div className="about-copy">
             <p>
-            I’m Ismawati Ainol Robbi, a System Information graduate and Web Developer based in Sidoarjo. 
-            I build practical web applications, dashboards, and data-driven systems using technologies such as React, TypeScript, Node.js, and PostgreSQL.
-            I enjoy turning business needs into structured digital solutions — from developing operational systems and reporting dashboards to working with APIs, databases, and application logic. 
-            I’m interested in building reliable products, solving real-world problems, and continuously growing as a web developer through hands-on work and collaboration.
+              I’m Ismawati Ainol Robbi, a System Information graduate and Full Stack Web Developer
+              based in Sidoarjo. I build practical web applications, dashboards, and data-driven
+              systems using technologies such as React, TypeScript, Node.js, and PostgreSQL.
+            </p>
+            <p>
+              I enjoy turning business needs into structured digital solutions — from developing
+              operational systems and reporting dashboards to working with APIs, databases, and
+              application logic. I’m interested in building reliable products, solving real-world
+              problems, and continuously growing as a web developer through hands-on work and
+              collaboration.
             </p>
             <a className="text-action" href="#contact">
               More about me <ArrowUpRight aria-hidden="true" />

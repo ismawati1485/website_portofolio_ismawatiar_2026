@@ -84,7 +84,7 @@ describe("Projects and Screenshots Data", () => {
       "utf-8",
     );
     expect(indexSource).toContain("@/assets/ISMA.JPG");
-    expect(indexSource).toContain("/Ismawati_Ainol_Robbi_Web Developer.pdf");
+    expect(indexSource).toContain("/Ismawati%20Ainol%20Robbi_Web%20Developer.pdf");
     expect(indexSource).toContain('download="Ismawati_Ainol_Robbi_CV.pdf"');
   });
 
@@ -105,7 +105,7 @@ describe("Projects and Screenshots Data", () => {
       "utf-8",
     );
     expect(indexSource).toContain("// GANTI INI - EMAIL");
-    expect(indexSource).toContain("EMAIL_KAMU");
+    expect(indexSource).toContain("CONTACT_EMAIL");
     expect(indexSource).toContain("// GANTI INI - WHATSAPP");
     expect(indexSource).toContain("WHATSAPP_NUMBER");
     expect(indexSource).toContain("// GANTI INI - GITHUB");
