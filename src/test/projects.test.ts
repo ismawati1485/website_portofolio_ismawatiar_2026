@@ -84,7 +84,7 @@ describe("Projects and Screenshots Data", () => {
       "utf-8",
     );
     expect(indexSource).toContain("@/assets/ISMA.JPG");
-    expect(indexSource).toContain("/cv/Ismawati_Ainol_Robbi_CV.pdf");
+    expect(indexSource).toContain("/Ismawati_Ainol_Robbi_Web Developer.pdf");
     expect(indexSource).toContain('download="Ismawati_Ainol_Robbi_CV.pdf"');
   });
 

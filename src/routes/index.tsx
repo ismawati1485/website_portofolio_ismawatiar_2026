@@ -23,13 +23,13 @@ const CONTACT_LINKEDIN_URL = "www.linkedin.com/in/ismawatiar";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ismawati Ainol Robbi — Full Stack Web Developer" },
+      { title: "Ismawati Ainol Robbi — Web Developer" },
       {
         name: "description",
         content:
-          "Selected work and introduction of Ismawati Ainol Robbi, a full stack web developer building practical web applications and data-driven systems.",
+          "Selected work and introduction of Ismawati Ainol Robbi, a web developer building practical web applications and data-driven systems.",
       },
-      { property: "og:title", content: "Ismawati Ainol Robbi — Full Stack Web Developer" },
+      { property: "og:title", content: "Ismawati Ainol Robbi — Web Developer" },
       {
         property: "og:description",
         content: "Web applications, dashboards, and data-driven systems by Ismawati Ainol Robbi.",
@@ -89,7 +89,7 @@ function Portfolio() {
           </a>
           <Button variant="outline" size="sm" className="cv-button" asChild>
             <a
-              href="/Ismawati_Ainol_Robbi_CV.pdf"
+              href="/Ismawati_Ainol_Robbi_Web Developer.pdf"
               download="Ismawati_Ainol_Robbi_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -117,7 +117,6 @@ function Portfolio() {
             <span className="status-dot" /> Portfolio / 2026
           </p>
           <h1>
-            FULL STACK
             <br />
             WEB DEVELOPER<span className="headline-period">.</span>
           </h1>
@@ -247,7 +246,7 @@ function Portfolio() {
           </h2>
           <div className="about-copy">
             <p>
-            I’m Ismawati Ainol Robbi, a System Information graduate and Full Stack Web Developer based in Sidoarjo. 
+            I’m Ismawati Ainol Robbi, a System Information graduate and Web Developer based in Sidoarjo. 
             I build practical web applications, dashboards, and data-driven systems using technologies such as React, TypeScript, Node.js, and PostgreSQL.
             I enjoy turning business needs into structured digital solutions — from developing operational systems and reporting dashboards to working with APIs, databases, and application logic. 
             I’m interested in building reliable products, solving real-world problems, and continuously growing as a web developer through hands-on work and collaboration.
